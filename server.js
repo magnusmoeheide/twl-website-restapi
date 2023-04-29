@@ -6,7 +6,7 @@ const port = 3001
 
 const authorRoutes = require('./src/authors/author_routes');
 const articleRoutes = require('./src/articles/article_routes');
-const wwdRoutes = require('./src/whatwedo/wwd_routes');
+const wwdRoutes = require('./src/whatWeDo/wwd_routes');
 const wwdSectionsRoutes = require('./src/wwdsections/wwd_sections_routes');
 const ognRoutes = require('./src/ourgreatestneeds/ogn_routes');
 const teamRoutes = require('./src/team/team_routes');
