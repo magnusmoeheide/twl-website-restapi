@@ -4,6 +4,12 @@ const app = express()
 app.use(cors());
 const port = 3001
 
+const corsOptions = {
+  origin: 'https://magnusmoeheide.github.io/the-watoto-library-website'
+};
+
+app.use(cors(corsOptions));
+
 const authorRoutes = require('./src/authors/author_routes');
 const articleRoutes = require('./src/articles/article_routes');
 const wwdRoutes = require('./src/whatWeDo/wwd_routes');
