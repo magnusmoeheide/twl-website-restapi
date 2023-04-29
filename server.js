@@ -7,17 +7,17 @@ const port = 3001
 const authorRoutes = require('./src/authors/author_routes');
 const articleRoutes = require('./src/articles/article_routes');
 const wwdRoutes = require('./src/whatWeDo/wwd_routes');
-const wwdSectionsRoutes = require('./src/wwdsections/wwd_sections_routes');
-const ognRoutes = require('./src/ourgreatestneeds/ogn_routes');
+const wwdSectionsRoutes = require('./src/wwdSections/wwd_sections_routes');
+const ognRoutes = require('./src/ourGreatestNeeds/ogn_routes');
 const teamRoutes = require('./src/team/team_routes');
-const articleSectionsRoutes = require('./src/articlesections/article_sections_routes');
+const articleSectionsRoutes = require('./src/articleSections/article_sections_routes');
 
 app.use(express.json())
 
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
+  // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  // res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  // res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   next();
 });
 
