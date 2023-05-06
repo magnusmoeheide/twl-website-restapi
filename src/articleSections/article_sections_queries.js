@@ -3,7 +3,8 @@ const getArticleSectionsById = "SELECT article_sections.* " +
                        "FROM article_sections " +
                        "JOIN articles " +
                        "ON article_sections.article_id = articles.id " +
-                       "WHERE articles.id = $1;";
+                       "WHERE articles.id = $1 " +
+                       "ORDER BY article_sections.section_number ASC;";
 
 const updateArticleSectionsById = "UPDATE article_sections " +
                        "SET section_header = $1, section_text = $2, section_number = $3 " +

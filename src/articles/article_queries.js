@@ -1,5 +1,5 @@
 const getArticles = "SELECT * FROM articles ORDER BY publish_date DESC";
-const getArticlesById = "SELECT * FROM articles WHERE id = $1";
+const getArticlesById = "SELECT * FROM articles WHERE id = $1 ORDER BY publish_date DESC";
 const getNewestArticle = "SELECT * FROM articles WHERE publish_date IS NOT NULL ORDER BY publish_date DESC LIMIT 1";
 const getArticleSections = "SELECT a.publish_date, s.* FROM article_sections s JOIN articles a ON s.article_id = a.id";
 //onst getArticleWithInstructor = "SELECT articles.*, authors.name as instructor FROM articles JOIN authors ON articles.author_id = authors.id WHERE articles.id = $1";
