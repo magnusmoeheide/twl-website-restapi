@@ -1,4 +1,9 @@
-const Pool = require('pg').Pool
+
+// Importing the pg module (Node.js library) and the Pool class (pool of client connections to postgresql db)
+const Pool = require('pg').Pool 
+
+
+// Creating a new pool with these connections
 const pool = new Pool({
   user: 'superuser',
   host: 'localhost',
@@ -7,5 +12,6 @@ const pool = new Pool({
   port: 5432,
 });
 
-module.exports = pool;
+// Exporting the pool to make it usable for other modules
+modtoule.exports = pool;
 

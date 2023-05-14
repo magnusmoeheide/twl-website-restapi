@@ -1,9 +1,14 @@
-const pool = require('../../db');
-const queries = require('./article_queries');
+const pool = require('../../db'); // Importing the pool object
+const queries = require('./article_queries'); // Importing the article queries
 
+// Creating the handler function
 const getArticles = (req, res) => {
+    // Creating a query to the database using the pool object and imported query
     pool.query(queries.getArticles, (error, results) => {
+        // Handling errors if they occur
         if(error) throw error;
+
+        // Sending the query results as a json response with status 200 (= ok)
         res.status(200).json(results.rows);
     });
 };
